@@ -1,2 +1,635 @@
 /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #RTsbsr-952,
+    #RTsbsr-952,
+    #RTsbst-952 {
+        padding: var(--sectionPadding);
+        position: relative;
+        /* clips anything overflowing */
+        overflow: hidden;
+
+        .cs-container {
+            /* changes to 1280px at desktop */
+            max-width: calc(550 / 16 * 1rem);
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            max-width: calc(542 / 16 * 1rem);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            font-weight: 700;
+            text-align: center;
+            min-width: calc(150 / 16 * 1rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            padding: 0 calc(32 / 16 * 1rem);
+            color: #fff;
+            background-color: var(--primary);
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #000;
+                opacity: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-contact-group {
+            width: 100%;
+            margin-bottom: calc(32 / 16 * 1rem);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(12 / 16 * 1rem);
+        }
+
+        .cs-link {
+            padding-right: calc(30 / 16 * 1rem);
+            text-decoration: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            gap: calc(16 / 16 * 1rem);
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                    height: calc(56 / 16 * 1rem);
+                }
+                .cs-wrapper {
+                    transform: scale(1.2);
+                }
+
+                .cs-icon {
+                    transform: translateX(0.4375rem);
+                }
+            }
+
+            &:before {
+                /* light green circle that animates on hover */
+                content: "";
+                width: calc(48 / 16 * 1rem);
+                height: calc(48 / 16 * 1rem);
+                background: #eff1f0;
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: -1;
+                transform: translateY(-50%);
+                transition:
+                    width 0.3s,
+                    height 0.3s,
+                    border-radius 0.3s;
+            }
+        }
+
+        .cs-wrapper {
+            width: calc(48 / 16 * 1rem);
+            height: calc(48 / 16 * 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .cs-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(4 / 16 * 1rem);
+        }
+
+        .cs-header {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-link-content {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 400;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+            font-size: min(2.24vw, 0.844em);
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: calc(650 / 16 * 1em);
+            height: calc(687 / 16 * 1em);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            display: block;
+            position: absolute;
+            /* clips the image to match the border radius of the cs-picture */
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            width: calc(349 / 16 * 1em);
+            height: calc(590 / 16 * 1em);
+            top: calc(49 / 16 * 1em);
+            left: 0;
+        }
+
+        .cs-picture2 {
+            width: calc(281 / 16 * 1em);
+            height: calc(387 / 16 * 1em);
+            top: 0;
+            right: 0;
+        }
+
+        .cs-picture3 {
+            width: calc(281 / 16 * 1em);
+            height: calc(280 / 16 * 1em);
+            right: 0;
+            bottom: 0;
+        }
+
+        .cs-seal {
+            width: calc(150 / 16 * 1em);
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -40%);
+        }
+
+        .cs-floater {
+            display: none;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #RTsbsr-952,
+    #RTsbsr-952,
+    #RTsbst-952 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            /* set to inherit at Large Desktop */
+            font-size: min(1.15vw, 1em);
+            margin: 0;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-content {
+            width: 51%;
+        }
+    }
+}
+
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+    #RTsbsr-952,
+    #RTsbsr-952,
+    #RTsbst-952 {
+        .cs-floater {
+            width: calc(445 / 16 * 1rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            top: calc(20 / 16 * 1rem);
+            right: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #RTsbsr-952,
+        #RTsbsr-952,
+        #RTsbst-952 {
+            .cs-title,
+            .cs-text,
+            .cs-header,
+            .cs-link-content {
+                color: var(--bodyTextColorWhite);
+                transition: color 0.3s;
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-link {
+                &:before {
+                    background-color: var(--accent);
+                }
+            }
+
+            .cs-icon {
+                /* makes icons that are not black turn white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-graphic1,
+            .cs-graphic2 {
+                filter: brightness(50%);
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #RTsbsr-952 {
+        background-color: #1a1a1a;
+
+        .cs-title,
+        .cs-header,
+        .cs-text,
+        .cs-link-content {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text,
+        .cs-link-content {
+            opacity: 0.8;
+        }
+
+        .cs-link {
+            &:before {
+                background-color: #484848;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #RTsbsr-952 {
+        .cs-image-group {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-floater {
+            right: auto;
+            left: calc(-50 / 16 * 1rem);
+            transform: scaleX(-1);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #RTsbsr-952 {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+
+
+
+/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #meet-team-1332 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1440 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: calc(650 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-color {
+            color: var(--primary);
+        }
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.3vw, 1.25rem);
+            position: relative;
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+                .cs-picture {
+                    &:before {
+                        opacity: 1;
+                    }
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .cs-name {
+                    color: #eda708;
+                }
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 320px - 412px */
+            height: clamp(20rem, 90vw, 25.75rem);
+            /* clips img tag from overflowing it on hover */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* defualt gradient */
+                content: "";
+                width: 100%;
+                height: 50%;
+                background: -moz-linear-gradient(
+                    top,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(17, 17, 17, 0.94) 65%,
+                    rgba(26, 26, 26, 0.94) 100%
+                ); /* FF3.6-15 */
+                background: -webkit-linear-gradient(
+                    top,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(17, 17, 17, 0.94) 65%,
+                    rgba(26, 26, 26, 0.94) 100%
+                ); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(17, 17, 17, 0.94) 65%,
+                    rgba(26, 26, 26, 0.94) 100%
+                );
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: opacity 0.3s;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+                object-position: top;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: transform 0.7s;
+            }
+        }
+
+        .cs-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            bottom: calc(24 / 16 * 1rem);
+            left: 0;
+            z-index: 10;
+        }
+
+        .cs-name {
+            /* 20px - 25px */
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 calc(4 / 16 * 1rem) 0;
+            color: #f6e5db;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .cs-job {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin-right: 0;
+            color: #f7f7f7;
+            display: block;
+        }
+    }
+}
+
+/* In-between - 550px */
+@media only screen and (min-width: 34.375rem) {
+    #meet-team-1332 {
+        .cs-card-group {
+            align-items: stretch;
+        }
+
+        .cs-item {
+            width: 48.3%;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #meet-team-1332 {
+        .cs-item {
+            width: 31.7%;
+        }
+    }
+}
+
+/* Large Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #meet-team-1332 {
+        .cs-card-group {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .cs-item {
+            width: 100%;
+
+            &:hover {
+                .cs-picture {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
+                .cs-info {
+                    opacity: 1;
+                    bottom: calc(24 / 16 * 1rem);
+                }
+
+                .cs-name,
+                .cs-job {
+                    transform: translateY(0);
+                }
+            }
+        }
+        .cs-picture {
+            &:before {
+                opacity: 0;
+            }
+        }
+
+        .cs-info {
+            opacity: 0;
+            bottom: calc(-50 / 16 * 1rem);
+            transition:
+                opacity 0.3s,
+                bottom 0.6s;
+        }
+
+        .cs-name,
+        .cs-job {
+            transform: translateY(1rem);
+            transition:
+                color 0.3s,
+                transform 0.3s;
+        }
+
+        .cs-job {
+            transition: transform 0.9s;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #meet-team-1332 {
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
