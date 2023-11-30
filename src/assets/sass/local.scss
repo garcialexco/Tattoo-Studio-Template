@@ -511,7 +511,6 @@
             height: calc(80 / 16 * 1rem);
             /* 12px - 20px */
             margin-right: clamp(0.75rem, 3vw, 1.25rem);
-            border-radius: 50%;
             border: 1px solid var(--primary);
             display: flex;
             justify-content: center;
@@ -846,7 +845,6 @@
             margin-top: calc(4 / 16 * 1rem);
             padding-left: calc(20 / 16 * 1rem);
             border: 1px solid #b4b2c7;
-            border-radius: calc(8 / 16 * 1rem);
             /* prevents border & padding from affecting height */
             box-sizing: border-box;
             transition: border 0.3s;
@@ -875,7 +873,6 @@
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(24 / 16 * 1rem);
             background-color: var(--primary);
-            border-radius: calc(4 / 16 * 1rem);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -892,7 +889,6 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: calc(4 / 16 * 1rem);
                 transition: width 0.3s;
             }
 
@@ -906,7 +902,6 @@
         .cs-submit {
             width: 100%;
             border: none;
-            border-radius: calc(8 / 16 * 1rem);
         }
 
         .cs-right-section {
@@ -917,7 +912,6 @@
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
-            border-radius: calc(20 / 16 * 1rem);
             background-color: var(--bodyTextColorWhite);
             /* cuts off corners on img tag */
             overflow: hidden;
@@ -1000,7 +994,6 @@
             margin-right: clamp(1rem, 2vw, 1.25rem);
             background-color: #fff;
             box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
-            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1018,7 +1011,6 @@
 
         .cs-picture {
             width: 100%;
-            border-radius: calc(8 / 16 * 1rem);
             /* clips image corners */
             overflow: hidden;
             display: block;
