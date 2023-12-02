@@ -811,3 +811,173 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-990 {
+        padding: var(--sectionPadding);
+        background-color: #1a1a1a;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(584 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            margin: 0;
+            max-width: 24ch;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            grid-column: span 12;
+            grid-row: span 1;
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 260px - 300px */
+            min-height: clamp(16.25rem, 30vw, 18.75rem);
+            aspect-ratio: (328/260);
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+                /* pushes the top of the image to the top of the container */
+                object-position: top;
+            }
+        }
+
+        .cs-flex {
+            text-align: left;
+            width: 100%;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+            /* prevents padding from affecting height and wodth */
+            box-sizing: border-box;
+            border: 1px solid #484848;
+            border-top: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-name {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-desc {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            font-weight: 400;
+            /* 8px - 28px */
+            margin: 0 0 clamp(0.5rem, 3.2vw, 1.75rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+            display: block;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+        }
+    }
+}
+
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+    #reviews-990 {
+        .cs-item {
+            display: flex;
+            flex-direction: row;
+            grid-column: span 6;
+        }
+
+        .cs-picture {
+            max-width: calc(240 / 16 * 1rem);
+            aspect-ratio: initial;
+        }
+
+        .cs-flex {
+            width: 65%;
+            max-width: calc(390 / 16 * 1rem);
+            flex: none;
+            border-top: 1px solid #484848;
+            border-left: none;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #reviews-990 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #reviews-990 {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
