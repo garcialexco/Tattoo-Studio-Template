@@ -288,6 +288,8 @@
         #RTsbsr-952,
         #RTsbsr-952,
         #RTsbst-952 {
+            background-color: var(--medium);
+
             .cs-title,
             .cs-text,
             .cs-header,
@@ -369,97 +371,6 @@
     body.dark-mode {
         #RTsbsr-952 {
             background-color: rgba(0, 0, 0, 0.8);
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #gallery-973 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at small desktop */
-            max-width: calc(550 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-gallery {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .cs-image {
-            width: 50%;
-            aspect-ratio: 1;
-            /* clips the image corners */
-            overflow: hidden;
-            display: block;
-            position: relative;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* makes it act like a background image */
-                object-fit: cover;
-            }
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #gallery-973 {
-        .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
-        }
-
-        .cs-image {
-            width: 25%;
-            height: calc(400 / 16 * 1rem);
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #gallery-973 {
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-            .cs-title,
-            .cs-text {
-                color: var(--bodyTextColorWhite);
-            }
         }
     }
 }
@@ -588,7 +499,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-strip-325 {
-            background-color: var(--medium);
+            background-color: #040404;
             .cs-header,
             .cs-link,
             .cs-hours {
@@ -606,6 +517,103 @@
             .cs-icon {
                 /* makes it so bright it turns white */
                 filter: brightness(1000%);
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-973 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at small desktop */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-gallery {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cs-image {
+            width: 50%;
+            aspect-ratio: 1;
+            /* clips the image corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #gallery-973 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-image {
+            width: 25%;
+            height: calc(400 / 16 * 1rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #gallery-973 {
+            background-color: var(--medium);
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
             }
         }
     }
@@ -910,7 +918,7 @@
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
-            background-color: var(--bodyTextColorWhite);
+            background-color: #f7f7f7;
             /* cuts off corners on img tag */
             overflow: hidden;
             display: flex;
@@ -990,8 +998,6 @@
             height: calc(64 / 16 * 1rem);
             /* 16px - 20px */
             margin-right: clamp(1rem, 2vw, 1.25rem);
-            background-color: #fff;
-            box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1098,6 +1104,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #cs-contact-240 {
+            background-color: var(--medium);
+
             .cs-text,
             .cs-title {
                 color: var(--bodyTextColorWhite);
@@ -1118,11 +1126,7 @@
             }
 
             .cs-right-section {
-                background-color: var(--medium);
-            }
-
-            .cs-icon-wrapper {
-                background-color: var(--accent);
+                background-color: #040404;
             }
 
             .cs-icon {
