@@ -188,7 +188,7 @@
 @media only screen and (min-width: 0rem) {
     #sbs-955 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--dark);
         /* clips anything overflowing */
         overflow: hidden;
         position: relative;
@@ -489,7 +489,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbs-955 {
-            background-color: #040404;
+            background-color: var(--dark);
         }
     }
 }

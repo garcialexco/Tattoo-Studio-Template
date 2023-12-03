@@ -370,7 +370,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #RTsbsr-952 {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: var(--dark);
         }
     }
 }
@@ -499,7 +499,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-strip-325 {
-            background-color: #040404;
+            background-color: var(--dark);
             .cs-header,
             .cs-link,
             .cs-hours {
@@ -784,7 +784,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-990 {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: var(--dark);
         }
     }
 }
@@ -1126,7 +1126,7 @@
             }
 
             .cs-right-section {
-                background-color: #040404;
+                background-color: var(--dark);
             }
 
             .cs-icon {
