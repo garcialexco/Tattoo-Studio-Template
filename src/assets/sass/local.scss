@@ -968,12 +968,13 @@
             font-size: clamp(1rem, 2vw, 1.25rem);
             line-height: 1.2em;
             text-decoration: none;
-            color: var(--bodyTextColor);
+            color: var(--primary);
             position: relative;
 
             &:hover {
                 &:before {
                     width: 100%;
+                    color: var(--primary);
                 }
             }
 
@@ -990,6 +991,7 @@
                 bottom: 0;
                 left: 0;
                 transition: width 0.3s;
+                color: var(--primary);
             }
         }
 
@@ -1127,11 +1129,6 @@
 
             .cs-right-section {
                 background-color: var(--dark);
-            }
-
-            .cs-icon {
-                /* makes it so bright it turns white */
-                filter: brightness(900%);
             }
 
             .cs-header,

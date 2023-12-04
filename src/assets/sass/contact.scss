@@ -429,11 +429,6 @@
                 background-color: var(--dark);
             }
 
-            .cs-icon {
-                /* makes it so bright it turns white */
-                filter: brightness(900%);
-            }
-
             .cs-header,
             .cs-link {
                 color: var(--bodyTextColorWhite);

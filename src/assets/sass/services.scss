@@ -95,15 +95,13 @@
 @media only screen and (min-width: 0rem) {
     #RTsbsr-952 {
         background-color: #1a1a1a;
-
+        
         .cs-li {
-            color: var(--bodyTextColorWhite);
-            opacity: 0.8;
+            color: var(--bodyTextColorWhite) !important;
             &:before {
-                background-color: var(--bodyTextColorWhite);
+                background-color: var(--bodyTextColorWhite) !important;
             }
         }
-
         .cs-title,
         .cs-header,
         .cs-text,
@@ -167,7 +165,7 @@
             color: var(--headerColor);
             opacity: 0.8;
             &:before {
-                background-color: var(--bodyTextColorWhite);
+                background-color: var(--headerColor);
             }
         }
 
@@ -467,6 +465,12 @@
                 }
             }
 
+            .cs-li {
+                &:before {
+                    background-color: var(--bodyTextColorWhite);
+                }
+            }
+
             .cs-icon {
                 /* makes icons that are not black turn white */
                 filter: grayscale(1) brightness(1000%);
@@ -519,9 +523,6 @@
         #list-1165 {
             .cs-li {
                 color: var(--bodyTextColorWhite);
-            }
-
-            .cs-li {
                 opacity: 0.8;
             }
         }

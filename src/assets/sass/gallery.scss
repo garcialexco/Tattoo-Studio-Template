@@ -502,7 +502,7 @@
 @media only screen and (min-width: 0rem) {
     #reviews-990 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: #fff;
 
         .cs-container {
             width: 100%;
@@ -529,7 +529,7 @@
         .cs-title {
             margin: 0;
             max-width: 24ch;
-            color: var(--bodyTextColorWhite);
+            color: #1a1a1a;
         }
 
         .cs-card-group {
@@ -591,7 +591,7 @@
             line-height: 1.2em;
             font-weight: 700;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: #1a1a1a;
         }
 
         .cs-desc {
@@ -600,7 +600,7 @@
             font-weight: 400;
             /* 8px - 28px */
             margin: 0 0 clamp(0.5rem, 3.2vw, 1.75rem);
-            color: var(--bodyTextColorWhite);
+            color: #4e4b66;
             opacity: 0.8;
             display: block;
         }
@@ -610,7 +610,7 @@
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: #4e4b66;
             opacity: 0.8;
         }
     }
@@ -660,6 +660,21 @@
     body.dark-mode {
         #reviews-990 {
             background-color: var(--medium);
+
+            .cs-title {
+                color: #fff;
+            }
+            .cs-name {
+                color: #fff;
+            }
+            .cs-desc {
+                color: #fff;
+                opacity: 0.8;
+            }
+            .cs-item-text {
+                color: #fff;
+                opacity: 0.8;
+            }
         }
     }
 }
