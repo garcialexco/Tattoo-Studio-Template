@@ -298,10 +298,6 @@
         .cs-icon {
             width: calc(72 / 16 * 1rem);
             height: auto;
-
-            &:hover {
-                
-            }
         }
 
         .cs-h3 {
@@ -443,7 +439,6 @@
 
             &:hover {
                 .cs-picture {
-                    background-color: #fff;
                     transform: scale(1.4);
                 }
             }
@@ -537,19 +532,6 @@
             .cs-link,
             .cs-hours {
                 color: var(--bodyTextColorWhite);
-            }
-
-            .cs-item {
-                &:hover {
-                    .cs-icon {
-                        filter: brightness(100%);
-                    }
-                }
-            }
-
-            .cs-icon {
-                /* makes it so bright it turns white */
-                filter: brightness(1000%);
             }
         }
     }
