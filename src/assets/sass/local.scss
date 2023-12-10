@@ -371,6 +371,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #services-1176 {
+            background-color: var(--medium);
+
             .cs-item {
                 background-color: #363637;
                 border-color: rgba(255, 255, 255, 0.2);
@@ -791,6 +793,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #gallery-453 {
+            background-color: var(--medium);
+
             .cs-topper {
                 color: var(--primaryLight);
             }
