@@ -1016,7 +1016,7 @@
             color: #fff;
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(32 / 16 * 1rem);
-            background-color: var(--primary);
+            background-color: var(--primaryLight);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -1111,7 +1111,7 @@
             font-weight: 400;
             /* 8px - 28px */
             margin: 0 0 clamp(0.5rem, 3.2vw, 1.75rem);
-            color: var(--primary);
+            color: var(--primaryLight);
             display: block;
             opacity: 0.8;
         }
@@ -1170,6 +1170,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #reviews-989 {
+            background-color: #090909;
+
             .cs-title,
             .cs-name,
             .cs-item-text {
