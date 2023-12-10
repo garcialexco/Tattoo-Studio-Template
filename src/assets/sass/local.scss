@@ -953,7 +953,7 @@
             font-weight: 400;
             /* 8px - 28px */
             margin: 0 0 clamp(0.5rem, 3.2vw, 1.75rem);
-            color: var(--bodyTextColor);
+            color: var(--primary);
             display: block;
         }
 
@@ -1012,7 +1012,6 @@
         #reviews-989 {
             .cs-title,
             .cs-name,
-            .cs-desc,
             .cs-item-text {
                 color: var(--bodyTextColorWhite);
             }
